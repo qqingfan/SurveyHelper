@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
 // if no environment variable (development environment), use default port 5000
 // in production environment, use the dynamic port injected
 const PORT = process.env.PORT || 5000;
-app.listen(5000);
+app.listen(PORT);
 
 
