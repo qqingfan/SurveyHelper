@@ -32,6 +32,7 @@ passport.use(
             (accessToken, refreshToken, profile, done) => {
                 User.findOne({ googleId: profile.id })
                     .then((existingUser) => {
+                        console.log(keys.googleClientID);
                         if (existingUser) {
                             // already have a record with the given profile ID
                             // done() to resume the auth process
