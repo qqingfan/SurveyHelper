@@ -23,7 +23,8 @@ passport.use(
             {
                 clientID: keys.googleClientID,
                 clientSecret: keys.googleClientSecret,
-                callbackURL: '/auth/google/callback'
+                callbackURL: '/auth/google/callback',
+                proxy: true
             }, 
             // after accessToken is retrieved, the callback arrow function will be called
             // ** access token: the permission to read user's profile, modify user's email list, etc.
