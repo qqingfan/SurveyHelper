@@ -1,5 +1,4 @@
 const passport = require('passport');
-const keys = require('../config/keys');
 
 module.exports = (app) => {
     // GoogleStrategy knows strategy 'google' and will use the 'GoogleStrategy'
@@ -21,7 +20,7 @@ module.exports = (app) => {
     })
 
     app.get('/', (req, res) => {
-        res.send({ hi: keys.googleClientID });
+        res.send({ hi: there });
     });
 }
 
